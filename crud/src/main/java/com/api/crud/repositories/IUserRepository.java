@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
-@Repository //un repositorio es una clase que permite hacer queryes a una base de datos
+@Repository
 public interface IUserRepository extends JpaRepository<UserModel, Long> {
 }

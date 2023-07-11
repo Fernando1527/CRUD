@@ -30,9 +30,12 @@ public class UserService {
         UserModel user = userRepository.findById(id).orElse(null);
 
         if (user != null){
-            user.setFirstName(request.getFirstName());
-            user.setLastName(request.getLastName());
-            user.setEmail(request.getEmail());
+            user.setMerchant(request.getMerchant());
+            user.setDate(request.getDate());
+            user.setPaymentMethod(request.getPaymentMethod());
+            user.setBuyer(request.getBuyer());
+            user.setLocation(request.getLocation());
+            user.setTotalAmount(request.getTotalAmount());
 
             UserModel updatedUser = userRepository.save(user);
             return updatedUser;

@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/purchases")
 public class UserController {
 
     @Autowired
@@ -48,15 +48,5 @@ public class UserController {
             return "Error, we had a problem deleting this user with ID " + id;
         }
     }
-
-   /* @Autowired
-    private IUserRepository iUserRepository;
-
-   @GetMapping("")
-    ModelAndView index(){
-        List<UserModel> userModels = this.userService.getUser();
-
-        return new ModelAndView("index")
-                .addObject("userModels", userModels);*/
-    }
+}
 
